@@ -1,15 +1,19 @@
 {
-    "presets": [
-        "@babel/preset-typescript",
-        ["@babel/preset-env", {
-            "targets": {
-                "browsers": ["last 2 versions"]
-            }
-        }]
-    ],
-    "plugins": [
-        ["@babel/plugin-proposal-decorators", { "legacy": true }],
-        ["@babel/plugin-proposal-class-properties", { "loose": true }],
-        "lodash"
-    ]
+  "presets": [
+    "next/babel",
+    "@zeit/next-typescript/babel"
+  ],
+  "plugins": [
+    ["@babel/plugin-proposal-decorators", { "legacy": true }],
+    ["@babel/plugin-proposal-class-properties", { "loose": true }],
+    ["module-resolver", {
+      "alias": {
+        "^antd/(.+)":       "./node_modules/\\0",
+        "^lib/(.+)":        "./\\0",
+        "^pages/(.+)":      "./\\0",
+        "^components/(.+)": "./\\0"
+      }
+    }],
+    "lodash"
+  ]
 }

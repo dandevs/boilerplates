@@ -1,7 +1,9 @@
 {
-    "rules": {
-        "semicolon": true,
-        "quotemark": [true, "double"],
-        "trailing-comma": [true, {"multiline": "always", "singleline": "never"}]
-    }
+  "rules": {
+    "semicolon": true,
+    "trailing-comma": [true, {
+      "multiline": "always"
+    }],
+    "quotemark": [true, "double"]
+  }
 }

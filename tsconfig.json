@@ -1,15 +1,27 @@
 {
-    "compilerOptions": {
-        "allowSyntheticDefaultImports": true,
-        "esModuleInterop": true,
-        "experimentalDecorators": true,
-        "preserveConstEnums": true,
+  "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "jsx": "preserve",
+    "lib": ["dom", "es2017"],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "preserveConstEnums": true,
+    "removeComments": false,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "target": "esnext",
+    "baseUrl": ".",
 
-        "target": "es6",
-        "module": "commonjs"
+    "paths": {
+      "lib/*":        ["lib/*"],
+      "pages/*":      ["pages/*"],
+      "components/*": ["components/*"]
     },
-
-    "typeAcquisition": {
-        "enable": true
-    }
+  },
+  "typeAcquisition": {
+    "enable": true,
+  }
 }
